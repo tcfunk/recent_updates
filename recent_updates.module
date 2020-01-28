@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains recent_updates.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function recent_updates_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the recent_updates module.
+    case 'help.page.recent_updates':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a block displaying content updated on the current day.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function recent_updates_theme() {
+  return [
+    'recent_updates_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

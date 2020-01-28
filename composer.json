@@ -1,0 +1,13 @@
+{
+    "name": "recent_updates",
+    "type": "drupal-module",
+    "description": "Provides a block displaying content updated on the current day.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/recent_updates",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/recent_updates",
+        "source": "http://cgit.drupalcode.org/recent_updates"
+    }
+}
